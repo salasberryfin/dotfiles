@@ -1,0 +1,39 @@
+-- SPACE is leader
+vim.g.mapleader = " "
+
+-- jj as ESC
+vim.keymap.set("i", "jj", "<ESC>")
+-- jj & ESC to get out of terminal insert mode
+vim.keymap.set("t", "<ESC>", "<C-\\><C-n>")
+vim.keymap.set("t", "jj", "<C-\\><C-n>")
+
+-- buffer navigation
+vim.keymap.set("n", "<leader>bn", vim.cmd.bn)
+vim.keymap.set("n", "<leader>bp", vim.cmd.bp)
+vim.keymap.set("n", "<leader>bq", vim.cmd.bd)
+vim.keymap.set("t", "<leader>bq", ":bd!<CR>")
+
+-- terminal
+vim.keymap.set("n", "<leader>t", vim.cmd.terminal)  -- terminal in new buffer
+vim.keymap.set("n", "<leader>vt", ":vs term://zsh<CR>") -- vert split terminal
+
+-- move visual blocks of code
+vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
+vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
+
+-- maintain cursor in useful position
+vim.keymap.set("n", "J", "mzJ`z")           -- do not move cursor to end of line when J
+vim.keymap.set("n", "<C-d>", "<C-d>zz")     -- keep cursor in the middle
+vim.keymap.set("n", "<C-u>", "<C-u>zz")     -- keep cursor in the middle
+vim.keymap.set("n", "n", "nzzzv")           -- center matched item in search
+vim.keymap.set("n", "N", "Nzzzv")           -- center matched item in search
+
+-- copy to system clipboard
+vim.keymap.set("n", "<leader>y", "\"+yy")
+vim.keymap.set("v", "<leader>y", "\"+y")
+
+-- paste from system clipboard
+vim.keymap.set("n", "<leader>ap", "\"+pa<ESC>")
+
+-- nvim-tree
+vim.keymap.set("n", "<C-n>", vim.cmd.NvimTreeToggle)
