@@ -47,3 +47,4 @@ vim.keymap.set("n", "<C-n>", vim.cmd.NvimTreeToggle)
 -- vim-fugitive
 vim.keymap.set("n", "<leader>gs", vim.cmd.Git)
 vim.keymap.set("n", "<leader>gd", vim.cmd.Gdiffsplit)
+vim.keymap.set("n", "<leader>ga", vim.cmd.Gwrite)
