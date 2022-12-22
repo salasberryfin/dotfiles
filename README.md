@@ -6,4 +6,5 @@ My "old" configuration is stored in a different Github repository and I wanted t
 
 1. nvim
 2. zshrc
-3. tmux [pending]
+3. i3
+4. tmux [pending]
