@@ -17,7 +17,6 @@ vim.keymap.set("n", "<C-h>", "<C-w>h")
 vim.keymap.set("n", "<leader>bn", vim.cmd.bn)
 vim.keymap.set("n", "<leader>bp", vim.cmd.bp)
 vim.keymap.set("n", "<leader>bq", vim.cmd.bd)
-vim.keymap.set("t", "<leader>bq", ":bd!<CR>")   -- weird behavior!
 
 -- terminal
 vim.keymap.set("n", "<leader>t", vim.cmd.terminal)  -- terminal in new buffer
@@ -46,6 +45,6 @@ vim.keymap.set("n", "<C-n>", vim.cmd.NvimTreeToggle)
 
 -- vim-fugitive
 vim.keymap.set("n", "<leader>gs", vim.cmd.Git)
-vim.keymap.set("n", "<leader>gl", vim.cmd.GitLog)
-vim.keymap.set("n", "<leader>gd", vim.cmd.Gdiffsplit)
+vim.keymap.set("n", "<leader>gl", vim.cmd.Gllog)
+vim.keymap.set("n", "<leader>gd", vim.cmd.Gvdiffsplit)
 vim.keymap.set("n", "<leader>ga", vim.cmd.Gwrite)

@@ -2,14 +2,13 @@
 font pango: Ubuntu Mono 8
 
 # wallpaper
-exec --no-startup-id feh --bg-scale ~/Pictures/Wallpapers/hill-valley-wp.jpeg
+exec --no-startup-id feh --bg-scale $HOME/Pictures/Wallpapers/wp.jpeg
 
 # to use gaps, window titlebars need to be disabled
 for_window [class=".*"] border pixel 1
-for_window [title=".*"] border pixel 1
 
-gaps inner 32
-gaps outer 0
+gaps inner 10
+gaps outer 10
 
 # set motions
 set $up k
@@ -65,11 +64,8 @@ bindsym Mod1+Control+Left exec amixer -D pulse sset Master toggle
 bindsym Mod1+Control+Up exec amixer -D pulse sset Master 2%+
 bindsym Mod1+Control+Down exec amixer -D pulse sset Master 2%-
 
-################################### Review from here
-
-# xss-lock grabs a logind suspend inhibit lock and will use i3lock to lock the
-# screen before suspend. Use loginctl lock-session to lock your screen.
-# exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
+# Lock screen
+bindsym Mod1+Control+L exec ~/.config/i3/lock.sh
 
 # multiple monitors on startup
 # exec --no-startup-id /usr/zsh triple-screen
@@ -81,7 +77,7 @@ exec --no-startup-id /usr/bin/xrandr --output DVI-I-2-2 --primary &
 workspace 1 output DVI-I-2-2
 workspace 2 output DVI-I-1-1
 
-# split in horizontal orientation
+# split in horizontal orientation - this conflicts with vim motions
 # bindsym Mod1+Shift+h split o
 
 # split in vertical orientation
@@ -185,69 +181,48 @@ mode "resize" {
 
 bindsym Mod1+r mode "resize"
 
-
-# Hider borders
-hide_edge_borders both
-# Client style
-#name                   #top    #border #text
-client.focused          #402e2e #978965 #402e2e #978965
-client.unfocused        #402e2e #402e2e #978965 #402e2e
-client.focused_inactive #402e2e #402e2e #978965 #402e2e
-client.urgent           #402e2e #402e2e #978965 #402e2e
+# bar: i3status and colors
+set $wsRosePineBg #191724
+set $wsRosePineText #e0def4
+set $wsRosePineFocused #403d52
+set $wsRosePineInactive #21202e
+set $wsRosePineActive #524f67
+set $borderActive #9ccfd8
+set $borderFocused #f6c177
+set $borderInactive #6e6a86
 
 bar {
-
-        # height in pixels
         height 25
+        position top
+        font pango: JetBrains Mono Medium 10
+        separator_symbol |
 
-        status_command i3status
-        
+        status_command i3status --config $HOME/.config/i3/i3status/config
+
         colors {
             statusline  #b1bfdd
-            background  #3f3f3f
+            background  $wsRosePineBg
 
-			#name              #border #bg     #text
-            focused_workspace  #978965 #402e2e #978965
-            active_workspace   #402e2e #402e2e #978965
-            inactive_workspace #402e2e #282828 #978965
-            urgent_workspace   #402e2e #402e2e #978965
+			#name              #border #bg #text
+            focused_workspace  $borderFocused $wsRosePineFocused $wsRosePineText
+            active_workspace   $borderActive $wsRosePineActive $wsRosePineText
+            inactive_workspace $borderInactive $wsRosePineInactive $wsRosePineText
+            urgent_workspace   $borderActive $wsRosePineActive $wsRosePineText
         }
-        
-        position top
-        strip_workspace_numbers yes
-        font pango: JetBrains Mono Medium 9
-        separator_symbol ⁞
 }
 
 # Personal commands
+exec setxkbmap -layout "us"
 bindsym Control+Shift+u exec setxkbmap -layout "us"
 bindsym Control+Shift+s exec setxkbmap -layout "es"
 
-# Lock screen
-# bindsym Mod1+Control+L exec i3lock --image=/home/keepler/.lockscreen.png -t -f
-
 # snapshots
 bindsym Mod1+p exec flameshot gui
-
-## Volume control
-
-# Path to volume control, without trailing slash
-set $volumepath ~/i3-volume
-
-# Command for the status line
-#   ie: i3blocks, i3status
-set $statuscmd i3status
 
 # Signal used to update the status line
 #   i3blocks uses SIGRTMIN+10 by default
 #   i3status uses SIGUSR1 by default
 set $statussig SIGUSR1
-
-#
-# Symbolic name for sink (numeric index not supported)
-#   Recommended: comment out this setting and omit the -s option to use default sink
-#   List sink names: pacmd list-sinks | awk -F "[<>]" '/^\s+name: <.*>/{print $2}'
-#set $sinkname alsa_output.pci-0000_00_1b.0.analog-stereo
 
 # remap Caps to Ctrl
 exec --no-startup-id /usr/bin/setxkbmap -option "ctrl:nocaps"
