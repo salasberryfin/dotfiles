@@ -30,6 +30,7 @@ return require('packer').startup(function(use)
 	  {run = ':TSUpdate'}
   )
 
+  -- nvim-web-devicons
   use { 'nvim-tree/nvim-web-devicons' }
 
   -- file explorer
@@ -37,6 +38,9 @@ return require('packer').startup(function(use)
       'nvim-tree/nvim-tree.lua',
       tag = 'nightly' -- optional, updated every week. (see issue #1193)
   }
+
+  -- Lualine
+  use { 'nvim-lualine/lualine.nvim' }
 
   -- Bufferline lists open buffers
   use { 'akinsho/bufferline.nvim', tag = "3.*" }
@@ -68,6 +72,12 @@ return require('packer').startup(function(use)
 		  {'L3MON4D3/LuaSnip'},
 		  {'rafamadriz/friendly-snippets'},
 	  }
+  }
+
+  -- go ide-like
+  use {
+      'fatih/vim-go',
+	  {run = ':GoUpdateBinaries'}
   }
 
 end)

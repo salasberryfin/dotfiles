@@ -28,7 +28,7 @@ vim.opt.smartindent = true
 
  -- miscellanea
  vim.opt.scrolloff = 8  -- change scrolling behavior8
- vim.opt.signcolumn = "yes"
+ vim.opt.signcolumn = 'yes'
  vim.opt.updatetime = 50
  vim.opt.colorcolumn = "80"   -- draw column at pos 80
 

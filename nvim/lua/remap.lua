@@ -7,6 +7,12 @@ vim.keymap.set("i", "jj", "<ESC>")
 vim.keymap.set("t", "<ESC>", "<C-\\><C-n>")
 vim.keymap.set("t", "jj", "<C-\\><C-n>")
 
+-- split navigation
+vim.keymap.set("n", "<C-k>", "<C-w>k")
+vim.keymap.set("n", "<C-l>", "<C-w>l")
+vim.keymap.set("n", "<C-j>", "<C-w>j")
+vim.keymap.set("n", "<C-h>", "<C-w>h")
+
 -- buffer navigation
 vim.keymap.set("n", "<leader>bn", vim.cmd.bn)
 vim.keymap.set("n", "<leader>bp", vim.cmd.bp)
@@ -37,3 +43,7 @@ vim.keymap.set("n", "<leader>ap", "\"+pa<ESC>")
 
 -- nvim-tree
 vim.keymap.set("n", "<C-n>", vim.cmd.NvimTreeToggle)
+
+-- vim-fugitive
+vim.keymap.set("n", "<leader>gs", vim.cmd.Git)
+vim.keymap.set("n", "<leader>gd", vim.cmd.Gdiffsplit)
