@@ -74,6 +74,9 @@ return require('packer').startup(function(use)
 	  }
   }
 
+  -- autopairs
+  use { 'windwp/nvim-autopairs' }
+
   -- go ide-like
   use {
       'fatih/vim-go',
