@@ -4,6 +4,9 @@ font pango: Ubuntu Mono 8
 # wallpaper
 exec --no-startup-id feh --bg-scale $HOME/Pictures/Wallpapers/wp.jpeg
 
+# remap Caps to Ctrl
+exec --no-startup-id /usr/bin/setxkbmap -option ctrl:nocaps
+
 # to use gaps, window titlebars need to be disabled
 for_window [class=".*"] border pixel 1
 
@@ -223,6 +226,3 @@ bindsym Mod1+p exec flameshot gui
 #   i3blocks uses SIGRTMIN+10 by default
 #   i3status uses SIGUSR1 by default
 set $statussig SIGUSR1
-
-# remap Caps to Ctrl
-exec --no-startup-id /usr/bin/setxkbmap -option "ctrl:nocaps"

@@ -31,6 +31,7 @@ vim.opt.smartindent = true
  vim.opt.signcolumn = 'yes'
  vim.opt.updatetime = 50
  vim.opt.colorcolumn = "80"   -- draw column at pos 80
+ vim.opt.splitright = true
 
 -- set termguicolors
 vim.opt.termguicolors = true
