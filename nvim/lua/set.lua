@@ -35,3 +35,6 @@ vim.opt.smartindent = true
 
 -- set termguicolors
 vim.opt.termguicolors = true
+
+-- rust
+vim.g.rustfmt_autosave = 1

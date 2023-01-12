@@ -83,5 +83,9 @@ return require('packer').startup(function(use)
 	  {run = ':GoUpdateBinaries'}
   }
 
+  -- rust ide-like
+  use {
+      'rust-lang/rust.vim',
+  }
 end)
 
