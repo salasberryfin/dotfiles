@@ -16,7 +16,7 @@ ZSH_THEME="agnoster"
 # DISABLE_MAGIC_FUNCTIONS="true"
 
 # Command auto-correction
-ENABLE_CORRECTION="true"
+# ENABLE_CORRECTION="true"
 
 # Uncomment the following line to display red dots whilst waiting for completion.
 # You can also set it to another string to have that shown instead of the default red dots.
@@ -50,6 +50,7 @@ source $ZSH/oh-my-zsh.sh
 
 # Aliases
 alias v="nvim"
+alias tmux="env TERM=xterm-256color tmux"
 alias zshconfig="v ~/.zshrc"
 alias nvimconfig="v ~/.config/nvim"
 alias nocaps="/usr/bin/setxkbmap -option 'ctrl:nocaps'"
