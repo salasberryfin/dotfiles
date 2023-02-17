@@ -77,11 +77,9 @@ return require('packer').startup(function(use)
   -- autopairs
   use { 'windwp/nvim-autopairs' }
 
-  -- go ide-like
-  use {
-      'fatih/vim-go',
-	  {run = ':GoUpdateBinaries'}
-  }
+  -- -- go ide-like
+  use 'ray-x/go.nvim'
+  use 'ray-x/guihua.lua'    -- floating window support
 
   -- rust ide-like
   use {
