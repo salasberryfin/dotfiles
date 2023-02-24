@@ -1,5 +1,8 @@
 # Font for window titles. Will also be used by the bar unless a different font is used in the bar {} block below.
-font pango: Ubuntu Mono 8
+font pango: Noto Sans 8
+
+# compton composite manager
+exec --no-startup-id compton
 
 # wallpaper
 exec --no-startup-id feh --bg-scale $HOME/Pictures/Wallpapers/wp.jpeg
@@ -185,32 +188,24 @@ mode "resize" {
 bindsym Mod1+r mode "resize"
 
 # bar: i3status and colors
-set $wsRosePineBg #191724
-set $wsRosePineText #e0def4
-set $wsRosePineFocused #403d52
-set $wsRosePineInactive #21202e
-set $wsRosePineActive #524f67
-set $borderActive #9ccfd8
-set $borderFocused #f6c177
-set $borderInactive #6e6a86
-
 bar {
         height 25
-        position top
-        font pango: JetBrains Mono Medium 10
+        position bottom
+        font pango: Noto Sans 9
         separator_symbol |
 
         status_command i3status --config $HOME/.config/i3/i3status/config
 
         colors {
-            statusline  #b1bfdd
-            background  $wsRosePineBg
+            statusline #FFFFFF
+            background #222133
 
 			#name              #border #bg #text
-            focused_workspace  $borderFocused $wsRosePineFocused $wsRosePineText
-            active_workspace   $borderActive $wsRosePineActive $wsRosePineText
-            inactive_workspace $borderInactive $wsRosePineInactive $wsRosePineText
-            urgent_workspace   $borderActive $wsRosePineActive $wsRosePineText
+            focused_workspace #664477 #664477 #cccccc #282828
+            active_workspace #DCCD69 #DCCD69 #181715 #928374
+            inactive_workspace #222133 #222133 #AAAAAA #928374
+            urgent_workspace #CE4045 #CE4045 #FFFFFF #ebdbb2
+                separator #AAAAAA
         }
 }
 
@@ -226,3 +221,7 @@ bindsym Mod1+p exec flameshot gui
 #   i3blocks uses SIGRTMIN+10 by default
 #   i3status uses SIGUSR1 by default
 set $statussig SIGUSR1
+client.focused #664477 #664477 #cccccc #e7d8b1
+client.focused_inactive #e7d8b1 #e7d8b1 #181715 #A074C4
+client.unfocused #222133 #222133 #AAAAAA #A074C4
+client.urgent #CE4045 #CE4045 #e7d8b1 #DCCD69
