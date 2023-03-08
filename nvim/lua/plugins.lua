@@ -85,5 +85,15 @@ return require('packer').startup(function(use)
   use {
       'rust-lang/rust.vim',
   }
+
+  -- elixir ide-like
+  use {
+      'mhanberg/elixir.nvim',
+  }
+
+  -- terraform
+  use {
+      'hashivim/vim-terraform',
+  }
 end)
 

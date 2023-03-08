@@ -38,3 +38,6 @@ vim.opt.termguicolors = true
 
 -- rust
 vim.g.rustfmt_autosave = 1
+
+-- terraform
+vim.g.terraform_fmt_on_save = 1
