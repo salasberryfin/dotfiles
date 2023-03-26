@@ -33,8 +33,9 @@ vim.diagnostic.config({
 	update_in_insert = true,
 	underline = true,
 	severity_sort = false,
-	float = true,
 })
+vim.o.updatetime = 250
+vim.cmd [[autocmd! CursorHold,CursorHoldI * lua vim.diagnostic.open_float(nil, {focus=false})]]
 
 lsp.nvim_workspace()
 lsp.setup()
