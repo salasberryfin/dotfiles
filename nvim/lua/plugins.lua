@@ -14,6 +14,12 @@ return require('packer').startup(function(use)
 	  end
   })
 
+  -- gruvbox colorscheme
+  use({ 'ellisonleao/gruvbox.nvim' })
+
+  -- kanagawa colorscheme
+  use({ 'rebelot/kanagawa.nvim' })
+
   -- Telescope
   use {
 	  'nvim-telescope/telescope.nvim', tag = '0.1.0',
@@ -77,6 +83,11 @@ return require('packer').startup(function(use)
   -- autopairs
   use { 'windwp/nvim-autopairs' }
 
+  -- toggle-term
+  use {"akinsho/toggleterm.nvim", tag = '*', config = function()
+      require("toggleterm").setup()
+  end}
+
   -- -- go ide-like
   use 'ray-x/go.nvim'
   use 'ray-x/guihua.lua'    -- floating window support
@@ -84,11 +95,6 @@ return require('packer').startup(function(use)
   -- rust ide-like
   use {
       'rust-lang/rust.vim',
-  }
-
-  -- elixir ide-like
-  use {
-      'mhanberg/elixir.nvim',
   }
 
   -- terraform
