@@ -48,3 +48,6 @@ vim.keymap.set("n", "<leader>gs", vim.cmd.Git)
 vim.keymap.set("n", "<leader>gl", vim.cmd.Gllog)
 vim.keymap.set("n", "<leader>gd", vim.cmd.Gvdiffsplit)
 vim.keymap.set("n", "<leader>ga", vim.cmd.Gwrite)
+
+-- go ide
+vim.keymap.set("n", "<leader>ss", vim.cmd.GoFillStruct)
