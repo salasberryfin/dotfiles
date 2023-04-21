@@ -97,6 +97,11 @@ return require('packer').startup(function(use)
       'rust-lang/rust.vim',
   }
 
+  -- helm
+  use {
+      'towolf/vim-helm',
+  }
+
   -- terraform
   use {
       'hashivim/vim-terraform',
