@@ -26,14 +26,14 @@ lsp.setup_nvim_cmp({
 })
 
 vim.diagnostic.config({
-	virtual_text = true,
-	signs = true,
-	update_in_insert = true,
-	underline = true,
-	severity_sort = false,
+    virtual_text = true,
+    signs = true,
+    float = false,
+    update_in_insert = true,
+    underline = false,
+    severity_sort = false,
 })
 vim.o.updatetime = 250
-vim.cmd [[autocmd! CursorHold,CursorHoldI * lua vim.diagnostic.open_float(nil, {focus=false})]]
 
 lsp.nvim_workspace()
 lsp.setup()
