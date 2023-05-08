@@ -1,6 +1,6 @@
 require('toggleterm').setup{
     size = 60,
-    open_mapping = [[<c-\>]],
+    open_mapping = [[<C-i>]],
     shade_filetypes = {},
     direction ='float',
     shade_terminals = true,
