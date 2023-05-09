@@ -27,7 +27,10 @@ ZSH_THEME="agnoster"
 # Standard plugins can be found in $ZSH/plugins/
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git)
+plugins=(
+    git
+    zsh-autosuggestions
+)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -48,9 +51,24 @@ source $ZSH/oh-my-zsh.sh
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
 
+# export to PATH
+export PATH=$PATH:/usr/local/go/bin
+
 # Aliases
 alias v="nvim"
 alias tmux="env TERM=xterm-256color tmux"
 alias zshconfig="v ~/.zshrc"
 alias nvimconfig="v ~/.config/nvim"
 alias nocaps="/usr/bin/setxkbmap -option 'ctrl:nocaps'"
+
+# vpn
+alias vpn-up='sudo openconnect --background --user=csalas@suse.com https://eu.vpn.suse.net'
+alias vpn-down='sudo kill -2 `pgrep openconnect`'
+
+# k8s
+alias k='kubectl'
+alias kgpo='kubectl get po'
+export KUBECONFIG=~/.kube/config
+
+# zsh-autosuggestions
+bindkey '^y' autosuggest-accept
