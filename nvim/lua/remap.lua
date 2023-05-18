@@ -19,7 +19,7 @@ vim.keymap.set("n", "<leader>bp", vim.cmd.bp)
 vim.keymap.set("n", "<leader>bq", vim.cmd.bd)
 
 -- terminal
-vim.keymap.set("n", "<leader>t", vim.cmd.terminal)  -- terminal in new buffer
+-- vim.keymap.set("n", "<leader>t", vim.cmd.terminal)  -- terminal in new buffer
 vim.keymap.set("n", "<leader>vt", ":vs term://zsh<CR>") -- vert split terminal
 
 -- move visual blocks of code

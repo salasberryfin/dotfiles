@@ -3,13 +3,13 @@ local lsp = require('lsp-zero')
 lsp.preset('recommended')
 
 lsp.ensure_installed({
-    'bashls',
+	'bashls',
     'clangd',
-    'dockerls',
-    'gopls',
-    'pyright',
-    'rust_analyzer',
-    'lua_ls',
+	'dockerls',
+	'gopls',
+	'pyright',
+	'rust_analyzer',
+	'lua_ls',
 })
 
 local cmp = require('cmp')
@@ -26,14 +26,15 @@ lsp.setup_nvim_cmp({
 })
 
 vim.diagnostic.config({
-    virtual_text = true,
-    signs = true,
+	virtual_text = true,
+	signs = true,
     float = false,
-    update_in_insert = true,
-    underline = false,
-    severity_sort = false,
+	update_in_insert = true,
+	underline = false,
+	severity_sort = false,
 })
 vim.o.updatetime = 250
+-- vim.cmd [[autocmd! CursorHold,CursorHoldI * lua vim.diagnostic.open_float(nil, {focus=false})]]
 
 lsp.nvim_workspace()
 lsp.setup()

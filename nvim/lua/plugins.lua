@@ -5,6 +5,8 @@ return require('packer').startup(function(use)
   -- Packer can manage itself
   use 'wbthomason/packer.nvim'
 
+  -- Colored colorschemes
+  --
   -- rose-pine colorscheme
   use({
 	  'rose-pine/neovim',
@@ -13,12 +15,21 @@ return require('packer').startup(function(use)
 		  vim.cmd('colorscheme rose-pine')
 	  end
   })
-
   -- gruvbox colorscheme
   use({ 'ellisonleao/gruvbox.nvim' })
-
   -- kanagawa colorscheme
   use({ 'rebelot/kanagawa.nvim' })
+  --
+
+  -- Minimal colorschemes
+  --
+  -- nord colorscheme
+  use({ 'shaunsingh/nord.nvim' })
+  -- warlock colorscheme
+  use({ 'hardselius/warlock' })
+  -- rasmus colorscheme
+  use({ 'kvrohit/rasmus.nvim' })
+  --
 
   -- Telescope
   use {
