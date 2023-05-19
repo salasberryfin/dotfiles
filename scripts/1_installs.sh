@@ -3,7 +3,7 @@
 echo "Updating and installing packages with Zypper..."
 sudo zypper ref
 sudo zypper in -y neovim i3 tmux zsh helm gcc gcc-c++ npm i3status openconnect \
-    opi scrot
+    opi scrot arandr
 
 # Go
 echo "Installing Go and related tools..."
@@ -24,7 +24,10 @@ git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-m
 cp ./zsh/.zshrc /home/$USER/.zshrc
 
 # Configure i3wm
-
+echo "Installing volumeicon..."
+sudo zypper addrepo https://download.opensuse.org/repositories/home:AndnoVember:windowmanagers/openSUSE_Tumbleweed/home:AndnoVember:windowmanagers.repo
+sudo zypper ref
+sudo zypper install volumeicon
 
 # Configure nvim
 echo "Installing nvim-packer..."
