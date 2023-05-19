@@ -3,7 +3,7 @@
 echo "Updating and installing packages with Zypper..."
 sudo zypper ref
 sudo zypper in -y neovim i3 tmux zsh helm gcc gcc-c++ npm i3status openconnect \
-    opi scrot arandr
+    opi scrot arandr ripgrep
 
 # Go
 echo "Installing Go and related tools..."

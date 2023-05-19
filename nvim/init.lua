@@ -7,3 +7,10 @@ vim.opt.shell = "/usr/bin/zsh"
 require("plugins")
 require("remap")
 require("set")
+
+-- open telescope when neovim starts
+vim.api.nvim_create_autocmd("VimEnter", {
+    callback = function()
+        vim.cmd("silent! lua require('telescope.builtin').find_files()")
+    end,
+})
