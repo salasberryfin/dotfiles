@@ -4,7 +4,7 @@ echo "Updating and installing packages with Zypper..."
 sudo zypper ref
 sudo zypper in -y neovim i3 tmux zsh helm gcc gcc-c++ npm i3status openconnect \
     opi scrot arandr ripgrep aws-cli libffi-devel python3-devel libopenssl-devel \
-    ack docker flameshot
+    ack docker flameshot openvpn
 # Azure cli from the SUSE repos fails -> install with Microsoft's script
 curl -L https://aka.ms/InstallAzureCli | bash
 
