@@ -1,6 +1,11 @@
 local builtin = require('telescope.builtin')
 
 require("telescope").setup {
+  --pickers = {
+  --    find_files = {
+  --        theme = "dropdown",
+  --    },
+  --},
   extensions = {
     file_browser = {
       theme = "ivy",

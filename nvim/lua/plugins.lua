@@ -117,5 +117,8 @@ return require('packer').startup(function(use)
   use {
       'hashivim/vim-terraform',
   }
+
+  -- copilot lua
+  use { "zbirenbaum/copilot.lua" }
 end)
 
