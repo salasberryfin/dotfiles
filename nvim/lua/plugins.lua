@@ -119,6 +119,21 @@ return require('packer').startup(function(use)
   }
 
   -- copilot lua
-  use { "zbirenbaum/copilot.lua" }
+  use {
+    "zbirenbaum/copilot.lua",
+    cmd = "Copilot",
+    event = "InsertEnter",
+    config = function()
+      require("copilot").setup({
+          suggestion = {
+              enabled = true,
+              auto_trigger = true,
+              keymap = {
+                  accept = "<M-Tab>",
+              },
+          },
+      })
+    end,
+  }
 end)
 
