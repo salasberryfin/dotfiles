@@ -1,8 +1,6 @@
 # dotfiles
-I'm in the process of rewriting all my dotfiles to use the essentials only.
-My "old" configuration is stored in a different Github repository and I wanted to start completely from scratch to remove everything that I no longer use.
 
-*This was originally inspired by theprimeagen.*
+A list of my essential configuration files.
 
 1. nvim
 2. zshrc
