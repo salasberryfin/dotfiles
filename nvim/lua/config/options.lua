@@ -12,6 +12,9 @@ vim.opt.smartindent = true
 -- line wrap
 vim.opt.wrap = false
 
+-- do not share clipboard with system
+vim.opt.clipboard = ""
+
 -- remove swap file
 vim.opt.swapfile = false
 
