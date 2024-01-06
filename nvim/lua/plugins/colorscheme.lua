@@ -1,5 +1,7 @@
 return {
 	--- Standard colorschemes
+	-- add nord
+	{ "shaunsingh/nord.nvim" },
 	-- add catppuccin
 	{ "catppuccin/nvim" },
 	-- add one-dark
@@ -20,7 +22,7 @@ return {
 	{
 		"LazyVim/LazyVim",
 		opts = {
-			colorscheme = "rasmus",
+			colorscheme = "nord",
 		},
 	},
 }
