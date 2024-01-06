@@ -1,0 +1,4 @@
+# nvim auto-generated files
+nvim/plugin
+plugins-bak.lua
+lazy-lock.json
