@@ -41,7 +41,7 @@ vim.keymap.set("v", "<leader>y", '"+y')
 vim.keymap.set("n", "<leader>ap", '"+pa<ESC>')
 
 -- nvim-tree
-vim.keymap.set("n", "<C-n>", vim.cmd.NvimTreeToggle)
+vim.keymap.set("n", "<C-n>", vim.cmd.Neotree)
 
 -- vim-fugitive
 vim.keymap.set("n", "<leader>gs", vim.cmd.Git)

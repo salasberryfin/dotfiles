@@ -5,5 +5,5 @@ vim.g.loaded_netrwPlugin = 1
 vim.opt.shell = "/usr/bin/zsh"
 
 require("config.lazy")
-require("config.options")
 require("config.keymaps")
+require("config.options")
