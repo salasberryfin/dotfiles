@@ -4,6 +4,8 @@ return {
 	{ "shaunsingh/nord.nvim" },
 	-- add catppuccin
 	{ "catppuccin/nvim" },
+	-- add gruvbox-material
+	{ "sainnhe/gruvbox-material" },
 	-- add one-dark
 	{ "joshdick/onedark.vim" },
 	-- add kanagawa
