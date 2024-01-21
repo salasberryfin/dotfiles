@@ -1,6 +1,9 @@
 return {
 	"williamboman/mason.nvim",
 	opts = {
+		ensure_installed = {
+			"gopls",
+		},
 		ui = {
 			icons = {
 				package_installed = "✓",

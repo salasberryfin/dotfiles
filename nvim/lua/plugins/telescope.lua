@@ -17,6 +17,7 @@ return {
 		{ "<Leader>fg", builtin.live_grep, {} },
 		{ "<Leader><Leader>", builtin.buffers, {} },
 		{ "<Leader>fb", ":Telescope file_browser<CR>", {} },
+		{ "<Leader>gr", builtin.lsp_references, {} },
 	},
 	config = function()
 		local telescope = require("telescope")
