@@ -1,9 +1,7 @@
 return {
 	"neovim/nvim-lspconfig",
 	config = function()
-		require("config.lsps.gopls")
-		require("config.lsps.rust_analyzer")
-
+		-- keymaps
 		vim.api.nvim_create_autocmd("LspAttach", {
 			group = vim.api.nvim_create_augroup("UserLspConfig", {}),
 			callback = function(ev)
@@ -25,6 +23,26 @@ return {
 				vim.keymap.set({ "n", "v" }, "<space>ca", vim.lsp.buf.code_action, opts)
 				vim.keymap.set("n", "gr", vim.lsp.buf.references, opts)
 			end,
+		})
+
+		local lspconfig = require("lspconfig")
+		local util = require("lspconfig/util")
+
+		-- gopls seutp
+		lspconfig.gopls.setup({
+			cmd = { "gopls" },
+			filetypes = { "go", "gomod", "gowork", "gotmpl" },
+			root_dir = util.root_pattern("go.work", "go.mod", ".git"),
+			settings = {
+				gopls = {
+					gofumpt = true,
+					completeUnimported = true,
+					usePlaceholders = true,
+					analyses = {
+						unusedparams = true,
+					},
+				},
+			},
 		})
 	end,
 }
