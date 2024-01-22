@@ -2,6 +2,8 @@ return {
 	--- Standard colorschemes
 	-- add nord
 	{ "shaunsingh/nord.nvim" },
+	-- add nordic
+	{ "AlexvZyl/nordic.nvim" },
 	-- add catppuccin
 	{ "catppuccin/nvim" },
 	-- add gruvbox-material
@@ -10,6 +12,8 @@ return {
 	{ "joshdick/onedark.vim" },
 	-- add kanagawa
 	{ "rebelot/kanagawa.nvim" },
+	-- add dracula
+	{ "Mofiqul/dracula.nvim" },
 	---
 	-- Minimal colorscheme
 	-- add atlas
@@ -24,7 +28,7 @@ return {
 	{
 		"LazyVim/LazyVim",
 		opts = {
-			colorscheme = "gruvbox-material",
+			colorscheme = "dracula-soft",
 		},
 	},
 }

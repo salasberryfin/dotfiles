@@ -3,7 +3,7 @@ return {
 	opts = {
 		options = {
 			icons_enabled = true,
-			theme = "gruvbox-material",
+			theme = "dracula",
 		},
 	},
 }
