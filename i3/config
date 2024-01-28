@@ -11,10 +11,11 @@ exec --no-startup-id feh --bg-scale $HOME/Pictures/Wallpapers/wp.jpeg
 exec --no-startup-id /usr/bin/setxkbmap -option ctrl:nocaps
 
 # to use gaps, window titlebars need to be disabled
-for_window [class=".*"] border pixel 1
+for_window [tiling] border pixel 0
+for_window [floating] border normal
 
-gaps inner 10
-gaps outer 10
+gaps inner 7
+gaps outer 7
 
 # set motions
 set $up k
@@ -74,14 +75,7 @@ bindsym Mod1+Control+Down exec amixer -D pulse sset Master 2%-
 bindsym Mod1+Control+L exec ~/.config/i3/lock.sh
 
 # multiple monitors on startup
-# exec --no-startup-id /usr/zsh triple-screen
-exec --no-startup-id /usr/bin/xrandr --output DVI-I-2-2 --auto --left-of eDP-1 &
-exec --no-startup-id /usr/bin/xrandr --output DVI-I-1-1 --auto --left-of DVI-I-2-2 &
-exec --no-startup-id /usr/bin/xrandr --output DVI-I-2-2 --rotate right &
-exec --no-startup-id /usr/bin/xrandr --output DVI-I-2-2 --primary &
-# exec --no-startup-id /usr/bin/xrandr --output DVI-I-1-1 --primary
-workspace 1 output DVI-I-2-2
-workspace 2 output DVI-I-1-1
+# TBD
 
 # split in horizontal orientation - this conflicts with vim motions
 # bindsym Mod1+Shift+h split o
@@ -190,8 +184,8 @@ bindsym Mod1+r mode "resize"
 # bar: i3status and colors
 bar {
         height 25
-        position bottom
-        font pango: Noto Sans 9
+        position top
+        font pango: Noto Sans 8
         separator_symbol |
 
         status_command i3status --config $HOME/.config/i3/i3status/config
