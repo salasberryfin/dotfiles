@@ -3,7 +3,7 @@ return {
 	optional = true,
 	opts = {
 		formatters_by_ft = {
-			go = { "goimports_reviser", "gofumpt" },
+			go = { "goimports", "gofumpt" },
 		},
 	},
 }
