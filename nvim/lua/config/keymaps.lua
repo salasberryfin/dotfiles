@@ -51,6 +51,8 @@ vim.keymap.set("n", "<leader>ga", vim.cmd.Gwrite)
 
 -- go ide
 vim.keymap.set("n", "<leader>ss", vim.cmd.GoFillStruct)
+-- nvim-dap-go
+vim.keymap.set("n", "<leader>db", vim.cmd.DapToggleBreakpoint)
 
 -- copilot
 vim.g.copilot_no_tab_map = true
