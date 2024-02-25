@@ -8,7 +8,8 @@ exec --no-startup-id compton
 exec --no-startup-id feh --bg-scale $HOME/Pictures/Wallpapers/wp.jpeg
 
 # remap Caps to Ctrl
-exec --no-startup-id /usr/bin/setxkbmap -option ctrl:nocaps
+# this does not work -> use localectl instead
+# exec --no-startup-id /usr/bin/setxkbmap -option 'ctrl:nocaps'
 
 # to use gaps, window titlebars need to be disabled
 for_window [tiling] border pixel 0
