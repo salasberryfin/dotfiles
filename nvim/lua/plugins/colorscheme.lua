@@ -12,8 +12,10 @@ return {
 	{ "joshdick/onedark.vim" },
 	-- add kanagawa
 	{ "rebelot/kanagawa.nvim" },
-	-- add dracula
-	{ "Mofiqul/dracula.nvim" },
+	-- add everforest
+	{ "sainnhe/everforest" },
+	-- add rose-pine
+	{ "rose-pine/neovim" },
 	---
 	-- Minimal colorscheme
 	-- add atlas
