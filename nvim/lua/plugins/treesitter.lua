@@ -7,6 +7,7 @@ return {
 			"lua",
 			"python",
 			"rust",
+			"ron",
 		},
 	},
 }
