@@ -16,6 +16,8 @@ return {
 	{ "sainnhe/everforest" },
 	-- add rose-pine
 	{ "rose-pine/neovim" },
+	-- add tokyonight
+	{ "folke/tokyonight.nvim" },
 	---
 	-- Minimal colorscheme
 	-- add atlas
@@ -30,7 +32,7 @@ return {
 	{
 		"LazyVim/LazyVim",
 		opts = {
-			colorscheme = "gruvbox-material",
+			colorscheme = "tokyonight-storm",
 		},
 	},
 }
