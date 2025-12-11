@@ -18,6 +18,7 @@ return {
 		{ "<Leader><Leader>", builtin.buffers, {} },
 		{ "<Leader>fb", ":Telescope file_browser<CR>", {} },
 		{ "<Leader>gr", builtin.lsp_references, {} },
+		{ "<Leader>gw", builtin.grep_string, {} },
 	},
 	config = function()
 		local telescope = require("telescope")
@@ -34,6 +35,7 @@ return {
 			pickers = {
 				find_files = {
 					hidden = true,
+					no_ignore = true,
 				},
 			},
 			extensions = {
