@@ -38,7 +38,7 @@ vim.keymap.set("n", "<leader>y", '"+yy')
 vim.keymap.set("v", "<leader>y", '"+y')
 
 -- paste from system clipboard
-vim.keymap.set("n", "<leader>ap", '"+pa<ESC>')
+vim.keymap.set("n", "<C-p>", '"+pa<ESC>')
 
 -- nvim-tree
 vim.keymap.set("n", "<C-n>", vim.cmd.Neotree)
