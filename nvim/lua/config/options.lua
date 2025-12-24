@@ -40,10 +40,8 @@ vim.opt.splitright = true
 vim.opt.termguicolors = true
 
 -- rust
+vim.g.lazyvim_rust_diagnostics = "rust-analyzer"
 vim.g.rustfmt_autosave = 1
 
 -- terraform
 vim.g.terraform_fmt_on_save = 1
-
--- lsp-zero
-vim.g.lsp_zero_extend_lspconfig = 0

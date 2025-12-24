@@ -1,0 +1,17 @@
+-- gopls seutp
+return {
+	cmd = { "gopls" },
+	filetypes = { "go", "gomod", "gowork", "gotmpl" },
+	root_markers = { "go.work", "go.mod", ".git" },
+	settings = {
+		gopls = {
+			gofumpt = true,
+			completeUnimported = true,
+			usePlaceholders = true,
+			analyses = {
+				unusedparams = true,
+			},
+			buildFlags = { "-tags=e2e" },
+		},
+	},
+}
