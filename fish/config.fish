@@ -3,6 +3,8 @@ if status is-interactive
     abbr g git
     abbr ga 'git add'
     abbr gd 'git diff'
+    abbr gcm 'git commit'
+    abbr gcmm 'git commit -m'
     abbr glog 'git log'
     abbr gst 'git status'
     abbr k kubectl
