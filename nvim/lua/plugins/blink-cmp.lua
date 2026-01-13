@@ -2,7 +2,7 @@ return {
 	"saghen/blink.cmp",
 	build = "cargo +nightly build --release",
 	enabled = true,
-	fuzzy = { implementation = "prefer_rust_with_warning" },
+	fuzzy = { implementation = "lua" },
 	opts = {
 		keymap = {
 			preset = "enter",
