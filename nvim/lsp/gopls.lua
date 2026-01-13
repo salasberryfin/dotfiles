@@ -1,4 +1,4 @@
--- gopls seutp
+-- gopls setup
 return {
 	cmd = { "gopls" },
 	filetypes = { "go", "gomod", "gowork", "gotmpl" },
