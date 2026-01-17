@@ -14,7 +14,7 @@ sudo zypper in -y go
 PATH=$PATH:/home/$USER/go/bin
 go install golang.org/x/tools/gopls
 
-# kubernets
+# kubernetes
 echo "Installing kubernetes stuff: kubectl, helm, k3s, k3d..."
 curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl"
 sudo install -o root -g root -m 0755 kubectl /usr/local/bin/kubectl
@@ -24,19 +24,22 @@ curl -sfL https://get.k3s.io | sh -
 echo "Installing k3d"
 wget -q -O - https://raw.githubusercontent.com/k3d-io/k3d/main/install.sh | bash
 
-# Configure Zsh
-echo "Installing oh-my-zsh..."
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" # will prompt the user
-git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
-cp ./zsh/.zshrc /home/$USER/.zshrc
+# NOTE: moved to fish
+# # Configure Zsh
+# echo "Installing oh-my-zsh..."
+# sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" # will prompt the user
+# git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+# cp ./zsh/.zshrc /home/$USER/.zshrc
 
 # Configure i3wm
 echo "Installing volumeicon..."
 sudo zypper addrepo https://download.opensuse.org/repositories/home:AndnoVember:windowmanagers/openSUSE_Tumbleweed/home:AndnoVember:windowmanagers.repo
 sudo zypper ref
 sudo zypper install volumeicon
+# Configure rofi as launcher
+sudo zypper in rofi picom
 
-# Configure nvim
-echo "Installing nvim-packer..."
-git clone --depth 1 https://github.com/wbthomason/packer.nvim\
- ~/.local/share/nvim/site/pack/packer/start/packer.nvim
+# # NOTE: moved to lazyvim
+# # Configure nvim
+# echo "Installing nvim-packer..."
+# git clone --depth 1 https://github.com/wbthomason/packer.nvim ~/.local/share/nvim/site/pack/packer/start/packer.nvim
