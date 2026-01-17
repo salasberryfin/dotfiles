@@ -9,13 +9,13 @@ general {
 }
 
 order += "disk /"
-order += "wireless wlp2s0"
+order += "wireless wlp1s0"
 order += "ethernet enx803f5d048da5"
 order += "battery 0"
 order += "memory"
-order += "volume master"
 order += "tztime local"
-order += "tztime berlin"
+order += "tztime pst"
+order += "volume master"
 
 volume master {
         format = "♪ %volume"
@@ -25,9 +25,9 @@ volume master {
         mixer_idx = 0
 }
 
-wireless wlp2s0 {
-        format_up = "wlp2s0%quality at %essid, %bitrate %ip"
-        format_down = "wlp2s0 down"
+wireless wlp1s0 {
+        format_up = "wlp1s0%quality, %bitrate %ip"
+        format_down = "wlp1s0 down"
 }
 
 ethernet enx803f5d048da5 {
@@ -36,7 +36,7 @@ ethernet enx803f5d048da5 {
 }
 
 battery 0 {
-        format = "%status %percentage %remaining %emptytime"
+        format = "%status %percentage - until %emptytime"
         format_down = "No battery"
         status_chr = "⚡ CHR"
         status_bat = "🔋 BAT"
@@ -47,12 +47,12 @@ battery 0 {
 }
 
 tztime local {
-        format = "%Y-%m-%d %H:%M:%S"
+        format = "Local: %Y-%m-%d %H:%M:%S"
 }
 
-tztime berlin {
-        format = "%Y-%m-%d %H:%M:%S %Z"
-        timezone = "Europe/Berlin"
+tztime pst {
+        format = "Pacific: %H:%M:%S"
+        timezone = "America/San_Francisco"
         hide_if_equals_localtime = true
 }
 
