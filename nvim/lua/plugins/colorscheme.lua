@@ -28,11 +28,11 @@ return {
 	{ "kvrohit/rasmus.nvim" },
 	---
 
-	-- Configure LazyVim to load catppuccin
+	-- Configure LazyVim to set default colorscheme
 	{
 		"LazyVim/LazyVim",
 		opts = {
-			colorscheme = "everforest",
+			colorscheme = "tokyonight",
 		},
 	},
 }
