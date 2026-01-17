@@ -5,7 +5,10 @@ font pango: JetBrains Mono 8
 exec --no-startup-id compton
 
 # wallpaper
-exec --no-startup-id feh --bg-scale $HOME/Pictures/Wallpapers/wp.jpeg
+exec --no-startup-id feh --bg-scale $HOME/Pictures/suse_wp.jpg
+
+# start `picom` a compositor for X11
+exec_always --no-startup-id picom -b
 
 # remap Caps to Ctrl
 # this does not work -> use localectl instead
@@ -62,8 +65,8 @@ bindsym Mod1+Return exec --no-startup-id alacritty
 # kill focused window
 bindsym Mod1+Shift+q kill
 
-# start dmenu (a program launcher)
-bindsym Mod1+d exec --no-startup-id dmenu_run -fn 'Ubuntu Mono:pixelsize=15'
+# start rofi as program launcher
+bindsym Mod1+d exec --no-startup-id rofi -show drun -show-icons -matching fuzzy -display-drun "🚀 Run: "
 
 # Volume control
 bindsym Mod1+Control+Right exec amixer -D pulse sset Master toggle
