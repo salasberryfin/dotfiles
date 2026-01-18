@@ -52,7 +52,7 @@ tztime local {
 
 tztime pst {
         format = "Pacific: %H:%M:%S"
-        timezone = "America/San_Francisco"
+        timezone = "America/Los_Angeles"
         hide_if_equals_localtime = true
 }
 
