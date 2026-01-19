@@ -1,5 +1,5 @@
 # Font for window titles. Will also be used by the bar unless a different font is used in the bar {} block below.
-font pango: JetBrains Mono 8
+font pango: JetBrains Mono 7
 
 # compton composite manager
 exec --no-startup-id compton
@@ -9,10 +9,6 @@ exec --no-startup-id feh --bg-scale $HOME/Pictures/suse_wp.jpg
 
 # start `picom` a compositor for X11
 exec_always --no-startup-id picom -b
-
-# remap Caps to Ctrl
-# this does not work -> use localectl instead
-# exec --no-startup-id /usr/bin/setxkbmap -option 'ctrl:nocaps'
 
 # to use gaps, window titlebars need to be disabled
 for_window [class=".*"] border pixel 0
