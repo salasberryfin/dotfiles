@@ -36,6 +36,11 @@ return {
 				find_files = {
 					hidden = true,
 					no_ignore = true,
+					path_display = {
+						filename_first = {
+							reverse_directories = false,
+						},
+					},
 				},
 			},
 			extensions = {
