@@ -23,24 +23,30 @@ return {
 	config = function()
 		local telescope = require("telescope")
 		telescope.setup({
+			defaults = {
+				path_display = {
+					filename_first = {
+						reverse_directories = false,
+					},
+				},
+				layout_strategy = "horizontal",
+				layout_config = {
+					horizontal = {
+						mirror = false,
+						prompt_position = "bottom",
+						preview_width = 0.55,
+					},
+				},
+			},
 			initial_mode = "insert",
 			select_strategy = "reset",
 			sorting_strategy = "ascending",
 			color_devicons = true,
 			set_env = { ["COLORTERM"] = "truecolor" }, -- default = nil,
-			layout_config = {
-				prompt_position = "top",
-				preview_cutoff = 120,
-			},
 			pickers = {
 				find_files = {
 					hidden = true,
 					no_ignore = true,
-					path_display = {
-						filename_first = {
-							reverse_directories = false,
-						},
-					},
 				},
 			},
 			extensions = {
