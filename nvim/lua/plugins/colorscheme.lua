@@ -6,6 +6,8 @@ return {
 	{ "AlexvZyl/nordic.nvim" },
 	-- add catppuccin
 	{ "catppuccin/nvim" },
+	-- add gruvbox
+	{ "ellisonleao/gruvbox.nvim" },
 	-- add gruvbox-material
 	{ "sainnhe/gruvbox-material" },
 	-- add one-dark
@@ -32,7 +34,7 @@ return {
 	{
 		"LazyVim/LazyVim",
 		opts = {
-			colorscheme = "tokyonight",
+			colorscheme = "tokyonight-night",
 		},
 	},
 }
