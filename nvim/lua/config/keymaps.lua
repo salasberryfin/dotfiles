@@ -43,8 +43,5 @@ vim.keymap.set("n", "<leader>gl", vim.cmd.Gllog)
 vim.keymap.set("n", "<leader>gd", vim.cmd.Gvdiffsplit)
 vim.keymap.set("n", "<leader>ga", vim.cmd.Gwrite)
 
--- go ide
-vim.keymap.set("n", "<leader>ss", vim.cmd.GoFillStruct)
-
 -- copilot
 vim.g.copilot_no_tab_map = true
