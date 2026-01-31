@@ -14,8 +14,7 @@ vim.keymap.set("n", "<C-j>", "<C-w>j")
 vim.keymap.set("n", "<C-h>", "<C-w>h")
 
 -- terminal
--- vim.keymap.set("n", "<leader>t", vim.cmd.terminal)  -- terminal in new buffer
-vim.keymap.set("n", "<leader>vt", ":vs term://zsh<CR>") -- vert split terminal
+vim.keymap.set("n", "<leader>vt", ":vs term://fish<CR>") -- vert split terminal
 
 -- move visual blocks of code
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
