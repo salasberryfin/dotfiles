@@ -185,7 +185,7 @@ bindsym Mod1+r mode "resize"
 # bar: i3status and colors
 bar {
         height 25
-        position bottom
+        position top
         font pango: JetBrains Mono 9
         separator_symbol |
 
