@@ -1,7 +1,7 @@
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
 
--- set default shell to zsh
+-- set default shell to fish
 vim.opt.shell = "/usr/bin/fish"
 
 -- enable lsp for lua
