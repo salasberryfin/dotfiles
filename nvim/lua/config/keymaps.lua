@@ -7,12 +7,6 @@ vim.keymap.set("i", "jj", "<ESC>")
 vim.keymap.set("t", "<ESC>", "<C-\\><C-n>")
 vim.keymap.set("t", "jj", "<C-\\><C-n>")
 
--- split navigation
-vim.keymap.set("n", "<C-k>", "<C-w>k")
-vim.keymap.set("n", "<C-l>", "<C-w>l")
-vim.keymap.set("n", "<C-j>", "<C-w>j")
-vim.keymap.set("n", "<C-h>", "<C-w>h")
-
 -- terminal
 vim.keymap.set("n", "<leader>vt", ":vs term://fish<CR>") -- vert split terminal
 
