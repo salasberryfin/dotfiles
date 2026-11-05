@@ -64,7 +64,9 @@ bindsym Mod1+Return exec --no-startup-id alacritty
 bindsym Mod1+Shift+q kill
 
 # start rofi as program launcher
-bindsym Mod1+d exec --no-startup-id rofi -show drun -show-icons -matching fuzzy -display-drun "🚀 Run: "
+bindsym Mod1+d exec --no-startup-id rofi -show drun
+# rofi as window switcher (all workspaces)
+bindsym Mod1+Tab exec --no-startup-id rofi -show window
 
 # Volume control
 bindsym Mod1+Control+Right exec amixer -D pulse sset Master toggle
@@ -188,8 +190,7 @@ bindsym Mod1+r mode "resize"
 bar {
         height 25
         position top
-        font pango: JetBrains Mono 9
-        separator_symbol |
+        font pango: Iosevka Term 10
 
         status_command i3status --config $HOME/.config/i3/i3status/config
 
