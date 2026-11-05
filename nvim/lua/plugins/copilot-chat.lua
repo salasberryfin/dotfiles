@@ -7,6 +7,7 @@ return {
 		-- build = "make tiktoken",
 		opts = {
 			-- See Configuration section for options
+			model = "claude-haiku-5.5", -- cheap default, use $<model> in a prompt for harder questions
 			window = {
 				layout = "vertical",
 				border = "rounded", -- 'single', 'double', 'rounded', 'solid'
