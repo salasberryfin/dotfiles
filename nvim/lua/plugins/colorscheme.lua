@@ -9,7 +9,15 @@ return {
 	-- add gruvbox
 	{ "ellisonleao/gruvbox.nvim" },
 	-- add gruvbox-material
-	{ "sainnhe/gruvbox-material" },
+	{
+		"sainnhe/gruvbox-material",
+		init = function()
+			vim.g.gruvbox_material_background = "medium"
+			vim.g.gruvbox_material_foreground = "material"
+			vim.g.gruvbox_material_enable_italic = 1
+			vim.g.gruvbox_material_better_performance = 1
+		end,
+	},
 	-- add one-dark
 	{ "joshdick/onedark.vim" },
 	-- add kanagawa
@@ -34,7 +42,7 @@ return {
 	{
 		"LazyVim/LazyVim",
 		opts = {
-			colorscheme = "rose-pine-moon",
+			colorscheme = "gruvbox-material",
 		},
 	},
 }
