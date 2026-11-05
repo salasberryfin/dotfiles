@@ -40,38 +40,38 @@ blink_interval = 500
 thickness = 0.15
 
 [colors]
-# gruvbox-material (dark, medium)
+# everforest (dark, medium)
 [colors.primary]
-background = "#282828"
-foreground = "#d4be98"
+background = "#2d353b"
+foreground = "#d3c6aa"
 
 [colors.cursor]
-text = "#282828"
-cursor = "#d4be98"
+text = "#2d353b"
+cursor = "#d3c6aa"
 
 [colors.selection]
 text = "CellForeground"
-background = "#45403d"
+background = "#475258"
 
 [colors.normal]
-black =   "#3c3836"
-red =     "#ea6962"
-green =   "#a9b665"
-yellow =  "#d8a657"
-blue =    "#7daea3"
-magenta = "#d3869b"
-cyan =    "#89b482"
-white =   "#d4be98"
+black =   "#475258"
+red =     "#e67e80"
+green =   "#a7c080"
+yellow =  "#dbbc7f"
+blue =    "#7fbbb3"
+magenta = "#d699b6"
+cyan =    "#83c092"
+white =   "#d3c6aa"
 
 [colors.bright]
-black =   "#7c6f64"
-red =     "#ea6962"
-green =   "#a9b665"
-yellow =  "#d8a657"
-blue =    "#7daea3"
-magenta = "#d3869b"
-cyan =    "#89b482"
-white =   "#ddc7a1"
+black =   "#7a8478"
+red =     "#e67e80"
+green =   "#a7c080"
+yellow =  "#dbbc7f"
+blue =    "#7fbbb3"
+magenta = "#d699b6"
+cyan =    "#83c092"
+white =   "#d3c6aa"
 
 [terminal.shell]
 program = "/usr/bin/fish"
