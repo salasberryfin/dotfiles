@@ -17,35 +17,36 @@ end
 set -gx EDITOR nvim
 set -gx VISUAL nvim
 
-# Theme: gruvbox-material (dark, medium)
-set -gx BAT_THEME gruvbox-dark
-set -gx FZF_DEFAULT_OPTS "--color=fg:#d4be98,fg+:#ddc7a1,bg+:#32302f,hl:#7daea3,hl+:#7daea3,info:#d8a657,prompt:#d8a657,pointer:#89b482,marker:#89b482,spinner:#89b482,header:#7daea3,border:#45403d"
-set -g fish_color_normal d4be98
-set -g fish_color_command a9b665
-set -g fish_color_keyword ea6962
-set -g fish_color_param d4be98
-set -g fish_color_option 89b482
-set -g fish_color_quote d8a657
-set -g fish_color_redirection d3869b
-set -g fish_color_end e78a4e
-set -g fish_color_operator e78a4e
-set -g fish_color_escape d3869b
-set -g fish_color_error ea6962
-set -g fish_color_comment 7c6f64 --italics
-set -g fish_color_autosuggestion 7c6f64
+# Theme: everforest (dark, medium)
+# bat has no everforest theme; 'ansi' follows the terminal palette
+set -gx BAT_THEME ansi
+set -gx FZF_DEFAULT_OPTS "--color=fg:#d3c6aa,fg+:#d3c6aa,bg+:#343f44,hl:#7fbbb3,hl+:#7fbbb3,info:#dbbc7f,prompt:#dbbc7f,pointer:#83c092,marker:#83c092,spinner:#83c092,header:#7fbbb3,border:#475258"
+set -g fish_color_normal d3c6aa
+set -g fish_color_command a7c080
+set -g fish_color_keyword e67e80
+set -g fish_color_param d3c6aa
+set -g fish_color_option 83c092
+set -g fish_color_quote dbbc7f
+set -g fish_color_redirection d699b6
+set -g fish_color_end e69875
+set -g fish_color_operator e69875
+set -g fish_color_escape d699b6
+set -g fish_color_error e67e80
+set -g fish_color_comment 7a8478 --italics
+set -g fish_color_autosuggestion 7a8478
 set -g fish_color_valid_path --underline
-set -g fish_color_cwd 7daea3
-set -g fish_color_cwd_root ea6962
-set -g fish_color_user a9b665
-set -g fish_color_host 89b482
-set -g fish_color_selection --background=45403d
-set -g fish_color_search_match --background=45403d
-set -g fish_color_match --background=45403d
-set -g fish_pager_color_completion d4be98
-set -g fish_pager_color_description 928374 --italics
-set -g fish_pager_color_prefix d8a657 --bold
-set -g fish_pager_color_progress 282828 --background=d8a657
-set -g fish_pager_color_selected_background --background=45403d
+set -g fish_color_cwd 7fbbb3
+set -g fish_color_cwd_root e67e80
+set -g fish_color_user a7c080
+set -g fish_color_host 83c092
+set -g fish_color_selection --background=475258
+set -g fish_color_search_match --background=475258
+set -g fish_color_match --background=475258
+set -g fish_pager_color_completion d3c6aa
+set -g fish_pager_color_description 859289 --italics
+set -g fish_pager_color_prefix dbbc7f --bold
+set -g fish_pager_color_progress 2d353b --background=dbbc7f
+set -g fish_pager_color_selected_background --background=475258
 
 # TODO: End of testing new settings
 

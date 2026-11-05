@@ -23,7 +23,14 @@ return {
 	-- add kanagawa
 	{ "rebelot/kanagawa.nvim" },
 	-- add everforest
-	{ "sainnhe/everforest" },
+	{
+		"sainnhe/everforest",
+		init = function()
+			vim.g.everforest_background = "medium"
+			vim.g.everforest_enable_italic = 1
+			vim.g.everforest_better_performance = 1
+		end,
+	},
 	-- add rose-pine
 	{ "rose-pine/neovim" },
 	-- add tokyonight
@@ -42,7 +49,7 @@ return {
 	{
 		"LazyVim/LazyVim",
 		opts = {
-			colorscheme = "gruvbox-material",
+			colorscheme = "everforest",
 		},
 	},
 }
