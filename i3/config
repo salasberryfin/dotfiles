@@ -1,5 +1,5 @@
 # Font for window titles. Will also be used by the bar unless a different font is used in the bar {} block below.
-font pango: JetBrains Mono 7
+font pango: Iosevka Term 9
 
 # compton composite manager
 exec --no-startup-id compton
@@ -10,11 +10,13 @@ exec --no-startup-id feh --bg-scale $HOME/Pictures/suse_wp.jpg
 # start `picom` a compositor for X11
 exec_always --no-startup-id picom -b
 
-# to use gaps, window titlebars need to be disabled
-for_window [class=".*"] border pixel 0
+# thin pixel borders (no titlebars) so the focused window is visible
+default_border pixel 1
+default_floating_border pixel 1
 
-gaps inner 10
-gaps outer 10
+# small gaps: 8px between windows and at the screen edges
+gaps inner 8
+gaps outer 0
 
 # set motions
 set $up k
@@ -191,16 +193,18 @@ bar {
 
         status_command i3status --config $HOME/.config/i3/i3status/config
 
+        # everforest (dark, medium)
         colors {
-            statusline #FFFFFF
-            background #21201D
+            background #2d353b
+            statusline #d3c6aa
+            separator  #475258
 
-			#name              #border #bg #text
-            focused_workspace #664477 #88b090 #21201D #282828
-            active_workspace #DCCD69 #21201D #181715 #928374
-            inactive_workspace #222133 #222133 #AAAAAA #928374
-            urgent_workspace #CE4045 #CE4045 #FFFFFF #ebdbb2
-                separator #AAAAAA
+            #name              #border #bg     #text
+            focused_workspace  #a7c080 #a7c080 #2d353b
+            active_workspace   #475258 #475258 #d3c6aa
+            inactive_workspace #2d353b #2d353b #859289
+            urgent_workspace   #e67e80 #e67e80 #2d353b
+            binding_mode       #e69875 #e69875 #2d353b
         }
 }
 
@@ -216,7 +220,12 @@ bindsym Mod1+p exec flameshot gui
 #   i3blocks uses SIGRTMIN+10 by default
 #   i3status uses SIGUSR1 by default
 set $statussig SIGUSR1
-client.focused #664477 #664477 #cccccc #e7d8b1
-client.focused_inactive #e7d8b1 #e7d8b1 #181715 #A074C4
-client.unfocused #222133 #222133 #AAAAAA #A074C4
-client.urgent #CE4045 #CE4045 #e7d8b1 #DCCD69
+# window colors: everforest (dark, medium)
+# the indicator (yellow) shows where the next window will open
+#class                  #border #bg     #text   #indicator #child_border
+client.focused          #a7c080 #a7c080 #2d353b #dbbc7f    #a7c080
+client.focused_inactive #475258 #475258 #d3c6aa #475258    #475258
+client.unfocused        #343f44 #343f44 #859289 #343f44    #343f44
+client.urgent           #e67e80 #e67e80 #2d353b #e67e80    #e67e80
+client.placeholder      #2d353b #2d353b #d3c6aa #2d353b    #2d353b
+client.background       #2d353b
