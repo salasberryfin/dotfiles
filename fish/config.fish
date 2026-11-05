@@ -47,8 +47,6 @@ set -g fish_pager_color_prefix d8a657 --bold
 set -g fish_pager_color_progress 282828 --background=d8a657
 set -g fish_pager_color_selected_background --background=45403d
 
-# Ensure colors are handled correctly in Tmux/Nvim
-set -gx TERM xterm-256color
 # TODO: End of testing new settings
 
 set -gx PATH $PATH $HOME/.krew/bin
