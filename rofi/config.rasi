@@ -1,16 +1,21 @@
 configuration {
-    modi: "run,drun,window";
-    drun-display-format: "{icon} {name}";
-    display-drun: "   Apps ";
-    display-run: "   Run ";
-    display-window: "  Window ";
-
+    modi: "drun,run,window";
     show-icons: true;
     terminal: "alacritty";
-    hide-scrollbar: true;
-    font: "JetBrains Mono Medium 11";
+    font: "Iosevka Term 12";
 
-    location: 0;
+    // prompts: a single icon per mode
+    display-drun: "󰍉";
+    display-run: "󰍉";
+    display-window: "󰖯";
+
+    // window switcher: workspace and title
+    window-format: "{w}   {t}";
+
+    // fuzzy search, ranked like fzf
+    matching: "fuzzy";
+    sort: true;
+    sorting-method: "fzf";
     disable-history: false;
 
     // remap kb-secondary-copy as it is using ctrl+c by default
@@ -19,4 +24,4 @@ configuration {
     kb-cancel: "Escape,Control+c,Control+g";
 }
 
-@theme "sidebar"
+@theme "~/.config/rofi/everforest.rasi"

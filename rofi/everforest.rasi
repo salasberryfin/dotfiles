@@ -1,0 +1,105 @@
+/*
+ * everforest (dark, medium): minimal centered launcher
+ * matches the i3 borders and bar: square corners, 2px green border
+ */
+
+* {
+    bg:        #2d353b;
+    bg-alt:    #343f44;
+    fg:        #d3c6aa;
+    fg-dim:    #859289;
+    accent:    #a7c080;
+    active:    #dbbc7f;
+    urgent:    #e67e80;
+
+    background-color: transparent;
+    text-color:       @fg;
+}
+
+window {
+    location:         center;
+    anchor:           center;
+    width:            600px;
+    border:           2px;
+    border-color:     @accent;
+    background-color: @bg;
+}
+
+mainbox {
+    children: [ inputbar, message, listview ];
+    spacing:  0;
+}
+
+/* search field */
+inputbar {
+    children:         [ prompt, entry ];
+    padding:          12px 14px;
+    spacing:          12px;
+    background-color: @bg-alt;
+}
+
+prompt {
+    text-color: @accent;
+}
+
+entry {
+    placeholder:       "Search";
+    placeholder-color: @fg-dim;
+    cursor:            text;
+}
+
+message {
+    padding: 8px 14px;
+}
+
+/* results */
+listview {
+    lines:        8;
+    columns:      1;
+    fixed-height: false;
+    scrollbar:    false;
+    padding:      6px;
+    spacing:      2px;
+}
+
+element {
+    padding: 6px 10px;
+    spacing: 10px;
+}
+
+element normal.normal, element alternate.normal {
+    text-color: @fg;
+}
+
+element selected.normal {
+    background-color: @accent;
+    text-color:       @bg;
+}
+
+element normal.active, element alternate.active {
+    text-color: @active;
+}
+
+element selected.active {
+    background-color: @active;
+    text-color:       @bg;
+}
+
+element normal.urgent, element alternate.urgent {
+    text-color: @urgent;
+}
+
+element selected.urgent {
+    background-color: @urgent;
+    text-color:       @bg;
+}
+
+element-icon {
+    size:       1.2em;
+    text-color: inherit;
+}
+
+element-text {
+    text-color:     inherit;
+    vertical-align: 0.5;
+}
